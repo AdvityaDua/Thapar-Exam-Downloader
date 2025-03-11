@@ -11,8 +11,17 @@ import time
 import shutil
 import threading
 import os
+import sys
 
 
+def resource_path(relative_path):
+    """Get absolute path to resource, works for dev and for PyInstaller."""
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
 
 def check_connection(url='https://www.google.com'):
     """Checks if the internet connection is available using secure SSL verification."""
@@ -68,7 +77,7 @@ class TkinterApp(CTk):
         super().__init__()
         self.title("Thapar Exam Downloader")
         self.minsize(800, 600)
-        self.iconbitmap("icon.ico")
+        self.iconbitmap(resource_path("icon.ico"))
         
         self.after(100, lambda: self.wm_state("zoomed"))
     
@@ -78,11 +87,11 @@ class TkinterApp(CTk):
         
         
     def create_widgets(self):
-        self.bg_image = Image.open("bg.png")
+        self.bg_image = Image.open(resource_path("bg.png"))
         self.bg_photo = CTkImage(self.bg_image, size=(self.winfo_screenwidth(), self.winfo_screenheight()))
         self.bg_label = CTkLabel(self, text="", image=self.bg_photo)
         self.bg_label.place(x=0, y=0, relwidth=1, relheight=1)
-        self.logo_image = Image.open("logo.png") # Load your logo image
+        self.logo_image = Image.open(resource_path("logo.png")) # Load your logo image
         
         self.center_frame = CTkFrame(self, fg_color="transparent", width=int(0.3*self.width), height=int(0.6*self.height))
         self.center_frame.place(relx=0.5, rely=0.5, anchor="center")
@@ -152,7 +161,7 @@ class TkinterApp(CTk):
     
     def download_exam(self, subject_code, download_path):
         chromeOptions = webdriver.ChromeOptions()
-        chromeDriverPath = './driver/chromedriver.exe'
+        chromeDriverPath = resource_path("driver/chromedriver.exe")
         prefs = {"download.default_directory": download_path}
         chromeOptions.add_experimental_option("prefs", prefs)
         chromeOptions.add_argument("--headless")  # Enable headless mode
