@@ -11,22 +11,23 @@
 
 ---
 
-## 🛠️ Installation
+## 🫠️ Installation
 
-### **1️⃣ Clone the Repository**
+### **1⃣ Clone the Repository**
 ```bash
 git clone https://github.com/AdvityaDua/Thapar-Exam-Downloader.git
 cd Thapar-Exam-Downloader
 ```
 
-### **2️⃣ Install Dependencies**
+### **2⃣ Install Dependencies**
 Ensure you have Python installed. Then, run:
 ```bash
 pip install -r requirements.txt
 ```
-Make sure that you have the corresponding version of chrome installed. If the chrome version and our driver version are not close to each other, then try downloading the chromedriver which matches your chrome version and then trying again. 
+Make sure that you have the corresponding version of Chrome installed. If the Chrome version and our driver version are not close to each other, try downloading the ChromeDriver that matches your Chrome version and then try again.  
 
-Current version of ChromeDriver: 134.0.6998.35
+Current version of ChromeDriver: **134.0.6998.35**  
+
 ---
 
 ## 🚀 Usage
@@ -36,6 +37,17 @@ Run the script using:
 python main.py
 ```
 
+---
+
+## 👥 Download
+
+### 🖼️ **Windows**  [Download for Windows](https://raw.githubusercontent.com/AdvityaDua/Thapar-Exam-Downloader/main/release/windows/ExamDownloader.exe)  
+
+### 🍏 **MacOS** *(Coming Soon)*  
+
+### 🐧 **Linux** *(Coming Soon)*  
+
+---
 
 ## 🏆 Contributors
 
@@ -53,13 +65,13 @@ This project is licensed under the **MIT License**. See `LICENSE` for details.
 ## ⭐ Support & Feedback
 
 💬 If you find this tool useful, give it a ⭐ star on GitHub!  
-📧 For any queries, contact me at [duaadvitya@gmail.com](mailto:your-email@example.com).  
+📧 For any queries, contact me at [duaadvitya@gmail.com](mailto:duaadvitya@gmail.com).  
 
 ---
 
-## ⭐ Future Updates
+## 🚀 Future Updates
 
-I will be adding support for MacOS and Linux soon. So, be patient, many more is about to come.
+I will be adding support for **MacOS and Linux soon**. Stay tuned for more updates!  
 
 ---
 
