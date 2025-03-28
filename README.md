@@ -43,7 +43,7 @@ python main.py
 
 ### 🖼️ **Windows**  [Download for Windows](https://raw.githubusercontent.com/AdvityaDua/Thapar-Exam-Downloader/main/release/windows/ExamDownloader.exe)  
 
-### 🍏 **MacOS** *(Coming Soon)*  
+### 🍏 **MacOS** [Download for MacOS Silicon](https://raw.githubusercontent.com/AdvityaDua/Thapar-Exam-Downloader/main/release/macos/Thapar-Exam-Downloader.dmg)  
 
 ### 🐧 **Linux** *(Coming Soon)*  
 
