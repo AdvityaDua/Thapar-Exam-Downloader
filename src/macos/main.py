@@ -12,6 +12,7 @@ import shutil
 import threading
 import os
 import sys
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 def resource_path(relative_path):
@@ -77,7 +78,8 @@ class TkinterApp(CTk):
         super().__init__()
         self.title("Thapar Exam Downloader")
         self.minsize(800, 600)
-        self.iconbitmap(resource_path("icon.ico"))
+        if sys.platform == 'win32':
+            self.iconbitmap(resource_path("icon.ico"))
         
         self.after(100, lambda: self.wm_state("zoomed"))
     
@@ -160,17 +162,17 @@ class TkinterApp(CTk):
     
     def download_exam(self, subject_code, download_path):
         chromeOptions = webdriver.ChromeOptions()
-        chromeDriverPath = resource_path("driver/chromedriver")
+        chromeDriverPath = ChromeDriverManager().install()
         prefs = {"download.default_directory": download_path}
         chromeOptions.add_experimental_option("prefs", prefs)
-        chromeOptions.add_argument("--headless")  # Enable headless mode
-        chromeOptions.add_argument("--disable-gpu")  # Disable GPU acceleration (optional)
-        chromeOptions.add_argument("--window-size=1920,1080")  # Set a default window size (optional)
-        chromeOptions.add_argument("--disable-extensions")  # Disable extensions (optional)
-        chromeOptions.add_argument("--no-sandbox")  # Bypass OS security model (optional)
-        chromeOptions.add_argument("--disable-dev-shm-usage")  # Overcome limited resource problems (optional)
+        chromeOptions.add_argument("--headless")
+        chromeOptions.add_argument("--disable-gpu")  
+        chromeOptions.add_argument("--window-size=1920,1080")
+        chromeOptions.add_argument("--disable-extensions")  
+        chromeOptions.add_argument("--no-sandbox")  
+        chromeOptions.add_argument("--disable-dev-shm-usage")  
         
-        
+        self.label.configure(text='Please wait while we connect to the server.')
         driver = webdriver.Chrome(service=Service(chromeDriverPath), options=chromeOptions)
         driver.get("https://cl.thapar.edu/ques.php")
         
@@ -190,7 +192,7 @@ class TkinterApp(CTk):
                 self.label.configure(text="No exams found for the given subject code.")
                 self.update_idletasks()
                 return
-
+            self.label.configure(text=f'Found {total_exams-2} {"exams." if total_exams-2>1 else "exam."}')
             # **SHOW progress bar when downloading starts**
             self.progress_bar.place(relx=0.5, rely=0.9, anchor="n")
             self.progress_bar.set(0)

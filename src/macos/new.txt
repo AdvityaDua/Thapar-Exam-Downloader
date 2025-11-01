@@ -1,0 +1,105 @@
+<div id="body">
+   <link rel="stylesheet" href="style.css" type="text/css">
+	    <table width="80%" border="1">
+    <tbody><tr>
+    <th colspan="6"><tt style="font-family:Trebuchet MS;color:black; font-size:20px;text-align:center">These results matches your search criteria</tt></th>
+    </tr>
+    <tr bgcolor="#3e5e7d" style="font-family:Trebuchet MS;color: white; font-size:20px;">
+
+    <td class="auto-style1">Course Code</td>
+        <td class="auto-style1">Course Name</td>
+    <td class="auto-style1">Year</td>
+    <td class="auto-style1">Semester</td>
+    <td class="auto-style1">Type of Examination</td>
+    <td class="auto-style1">Download Link</td>
+    </tr>
+                    <tr bgcolor="#D6E5FB" style="word-wrap: break-word; font-family:Trebuchet MS;color: #FF6600; font-size:15px;">
+                <td>UCS310</td>
+                <td>DATABASE MANAGEMENT SYSTEM</td>    
+                <td>2023</td>
+                <td>E</td>
+                <td>EST</td>
+                <td>
+                                        <a href="download.php?id=yujiXeZDc5ptVIOUCS310JAqn3WuiMZoCpexs2lKac2023ENdYZ5MuSoVkIESTawnpL">Download</a></td>
+                </tr>
+                <tr bgcolor="#D6E5FB" style="word-wrap: break-word; font-family:Trebuchet MS;color: #FF6600; font-size:15px;">
+                <td>UCS310</td>
+                <td>DATABASE MANAGEMENT SYSTEM</td>    
+                <td>2023</td>
+                <td>E</td>
+                <td>MST</td>
+                <td>
+                                        <a href="download.php?id=vaJ70bx486RkKAZUCS310XaGsn1xcDeWHqtOR0MC5p2023EROfv7in1qyYHMSThT46s">Download</a></td>
+                </tr>
+                <tr bgcolor="#D6E5FB" style="word-wrap: break-word; font-family:Trebuchet MS;color: #FF6600; font-size:15px;">
+                <td>UCS310</td>
+                <td>DATABASE MANAGEMENT SYSTEM</td>    
+                <td>2023</td>
+                <td>O</td>
+                <td>AUX</td>
+                <td>
+                                        <a href="download.php?id=Qbrlo1hMVIezH8kUCS310rka9GY3e5qvOownxjtyLK2023OHy9ni0DPoeVcAUXcrCHV">Download</a></td>
+                </tr>
+                <tr bgcolor="#D6E5FB" style="word-wrap: break-word; font-family:Trebuchet MS;color: #FF6600; font-size:15px;">
+                <td>UCS310</td>
+                <td>DATABASE MANAGEMENT SYSTEM</td>    
+                <td>2024</td>
+                <td>E</td>
+                <td>AUX</td>
+                <td>
+                                        <a href="download.php?id=lnAzdaouyTc62N8UCS310Su7ThI8E2bXyZHFwlzBx12024EdHYjWF7txpchAUXLdRYK">Download</a></td>
+                </tr>
+                <tr bgcolor="#D6E5FB" style="word-wrap: break-word; font-family:Trebuchet MS;color: #FF6600; font-size:15px;">
+                <td>UCS310</td>
+                <td>DATABASE MANAGEMENT SYSTEM</td>    
+                <td>2024</td>
+                <td>E</td>
+                <td>EST</td>
+                <td>
+                                        <a href="download.php?id=HIlAW06ZKRMSzJvUCS310rFgBXQkMi78qzOunPTJ1j2024EZusK3kbzxwNWEST0Y1j9">Download</a></td>
+                </tr>
+                <tr bgcolor="#D6E5FB" style="word-wrap: break-word; font-family:Trebuchet MS;color: #FF6600; font-size:15px;">
+                <td>UCS310</td>
+                <td>DATABASE MANAGEMENT SYSTEM</td>    
+                <td>2024</td>
+                <td>E</td>
+                <td>MST</td>
+                <td>
+                                        <a href="download.php?id=fXnB1a8U0lvpYeIUCS310buP9reFj1tQHvNiGqVdTn2024EHAByIm3lZFsDMSTiSt85">Download</a></td>
+                </tr>
+                <tr bgcolor="#D6E5FB" style="word-wrap: break-word; font-family:Trebuchet MS;color: #FF6600; font-size:15px;">
+                <td>UCS310</td>
+                <td>DATABASE MANAGEMENT SYSTEM</td>    
+                <td>2025</td>
+                <td>E</td>
+                <td>AUX</td>
+                <td>
+                                        <a href="download.php?id=0GJn24MN7l3aIPWUCS310aO8PYFNth36gBqcIWefZ42025EC874NiZ5vtMPAUXBYsdl">Download</a></td>
+                </tr>
+                <tr bgcolor="#D6E5FB" style="word-wrap: break-word; font-family:Trebuchet MS;color: #FF6600; font-size:15px;">
+                <td>UCS310</td>
+                <td>DATABASE MANAGEMENT SYSTEM</td>    
+                <td>2025</td>
+                <td>E</td>
+                <td>EST</td>
+                <td>
+                                        <a href="download.php?id=9SrF2eZhyoVsimdUCS3102BoPNARsxqE5kdZIWU3u82025E25NxAIeGSqPyESTJa1A4">Download</a></td>
+                </tr>
+                <tr bgcolor="#D6E5FB" style="word-wrap: break-word; font-family:Trebuchet MS;color: #FF6600; font-size:15px;">
+                <td>UCS310</td>
+                <td>DATABASE MANAGEMENT SYSTEM</td>    
+                <td>2025</td>
+                <td>E</td>
+                <td>MST</td>
+                <td>
+                                        <a href="download.php?id=VuE7kYhQORAKxelUCS310NfQb3M0cFxXHAnpLYyI2R2025E0xJPOc2XKyRoMSTIX4H9">Download</a></td>
+                </tr>
+    
+    </tbody></table>
+	<br>
+<br>
+<br>
+<br>
+	<div class="row empty"></div>
+	
+</div>

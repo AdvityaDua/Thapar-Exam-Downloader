@@ -1,0 +1,662 @@
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Sep 28 14:05:20 2025] ***
+compiled with version: 12.2.0 on 22 January 2025 13:27:00
+os: Linux-6.12.33-alwaysdata #1 SMP PREEMPT_DYNAMIC Wed Jun 11 12:46:30 UTC 2025
+nodename: http5
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/thapar-exam-downloader
+detected binary path: /usr/alwaysdata/uwsgi/2.0.28/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/thapar-exam-downloader/exam-downloader/
+chdir(): No such file or directory [core/uwsgi.c line 2617]
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Sep 28 14:46:31 2025] ***
+compiled with version: 12.2.0 on 22 January 2025 13:27:00
+os: Linux-6.12.33-alwaysdata #1 SMP PREEMPT_DYNAMIC Wed Jun 11 12:46:30 UTC 2025
+nodename: http5
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/thapar-exam-downloader
+detected binary path: /usr/alwaysdata/uwsgi/2.0.28/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/thapar-exam-downloader/exam-downloader/
+your processes number limit is 385672
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...1545 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP6 address [fd00::6:a159]:8100 fd 3
+Python version: 3.13.6 (main, Aug 11 2025, 04:21:28) [GCC 12.2.0]
+Python main interpreter initialized at 0x7f01a25009f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2133432 bytes (2083 KB) for 20 cores
+*** Operational MODE: preforking ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 848861)
+spawned uWSGI worker 1 (pid: 848862, cores: 1)
+spawned 1 offload threads for uWSGI worker 1
+open("/home/thapar-exam-downloader/exam-downloader//__init__.py"): No such file or directory [plugins/python/python_plugin.c line 493]
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. GAME OVER ***
+OOPS ! failed loading app in worker 1 (pid 848862)
+Sun Sep 28 14:46:32 2025 - need-app requested, destroying the instance...
+SIGINT/SIGTERM received...killing workers...
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Sep 28 14:47:22 2025] ***
+compiled with version: 12.2.0 on 22 January 2025 13:27:00
+os: Linux-6.12.33-alwaysdata #1 SMP PREEMPT_DYNAMIC Wed Jun 11 12:46:30 UTC 2025
+nodename: http5
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/thapar-exam-downloader
+detected binary path: /usr/alwaysdata/uwsgi/2.0.28/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/thapar-exam-downloader/exam-downloader/
+your processes number limit is 385672
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...1545 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP6 address [fd00::6:a159]:8100 fd 3
+Python version: 3.13.6 (main, Aug 11 2025, 04:21:28) [GCC 12.2.0]
+Python main interpreter initialized at 0x7f00863009f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2133432 bytes (2083 KB) for 20 cores
+*** Operational MODE: preforking ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 850216)
+spawned uWSGI worker 1 (pid: 850217, cores: 1)
+spawned 1 offload threads for uWSGI worker 1
+Traceback (most recent call last):
+  File "/home/thapar-exam-downloader/exam-downloader/wsgi.py", line 8, in <module>
+    from main import app as application
+  File "/home/thapar-exam-downloader/exam-downloader/main.py", line 6, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. GAME OVER ***
+OOPS ! failed loading app in worker 1 (pid 850217)
+Sun Sep 28 14:47:23 2025 - need-app requested, destroying the instance...
+SIGINT/SIGTERM received...killing workers...
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Sep 28 14:47:27 2025] ***
+compiled with version: 12.2.0 on 22 January 2025 13:27:00
+os: Linux-6.12.33-alwaysdata #1 SMP PREEMPT_DYNAMIC Wed Jun 11 12:46:30 UTC 2025
+nodename: http5
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/thapar-exam-downloader
+detected binary path: /usr/alwaysdata/uwsgi/2.0.28/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/thapar-exam-downloader/exam-downloader/
+your processes number limit is 385672
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...1545 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP6 address [fd00::6:a159]:8100 fd 3
+Python version: 3.13.6 (main, Aug 11 2025, 04:21:28) [GCC 12.2.0]
+Python main interpreter initialized at 0x7fb7e61009f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2133432 bytes (2083 KB) for 20 cores
+*** Operational MODE: preforking ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 850244)
+spawned uWSGI worker 1 (pid: 850245, cores: 1)
+spawned 1 offload threads for uWSGI worker 1
+Traceback (most recent call last):
+  File "/home/thapar-exam-downloader/exam-downloader/wsgi.py", line 8, in <module>
+    from main import app as application
+  File "/home/thapar-exam-downloader/exam-downloader/main.py", line 6, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. GAME OVER ***
+OOPS ! failed loading app in worker 1 (pid 850245)
+Sun Sep 28 14:47:28 2025 - need-app requested, destroying the instance...
+SIGINT/SIGTERM received...killing workers...
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Sep 28 14:57:02 2025] ***
+compiled with version: 12.2.0 on 22 January 2025 13:27:00
+os: Linux-6.12.33-alwaysdata #1 SMP PREEMPT_DYNAMIC Wed Jun 11 12:46:30 UTC 2025
+nodename: http5
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/thapar-exam-downloader
+detected binary path: /usr/alwaysdata/uwsgi/2.0.28/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/thapar-exam-downloader/exam-downloader/
+your processes number limit is 385672
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...1545 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP6 address [fd00::6:a159]:8100 fd 3
+Python version: 3.12.11 (main, Aug 11 2025, 04:45:51) [GCC 12.2.0]
+!!! Python Home is not a directory: /home/thapar-exam-downloader/venv/ !!!
+Set PythonHome to /home/thapar-exam-downloader/venv/
+Python path configuration:
+  PYTHONHOME = '/home/thapar-exam-downloader/venv/'
+  PYTHONPATH = (not set)
+  program name = '/home/thapar-exam-downloader/venv//bin/python'
+  isolated = 0
+  environment = 1
+  user site = 1
+  safe_path = 0
+  import site = 1
+  is in build tree = 0
+  stdlib dir = '/home/thapar-exam-downloader/venv/lib/python3.12'
+  sys._base_executable = '/home/thapar-exam-downloader/venv/bin/python'
+  sys.base_prefix = '/home/thapar-exam-downloader/venv/'
+  sys.base_exec_prefix = '/home/thapar-exam-downloader/venv/'
+  sys.platlibdir = 'lib'
+  sys.executable = '/home/thapar-exam-downloader/venv/bin/python'
+  sys.prefix = '/home/thapar-exam-downloader/venv/'
+  sys.exec_prefix = '/home/thapar-exam-downloader/venv/'
+  sys.path = [
+    '/home/thapar-exam-downloader/venv/lib/python312.zip',
+    '/home/thapar-exam-downloader/venv/lib/python3.12',
+    '/home/thapar-exam-downloader/venv/lib/python3.12/lib-dynload',
+  ]
+Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007f9ddfb84740 (most recent call first):
+  <no Python frame>
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Sep 28 14:57:10 2025] ***
+compiled with version: 12.2.0 on 22 January 2025 13:27:00
+os: Linux-6.12.33-alwaysdata #1 SMP PREEMPT_DYNAMIC Wed Jun 11 12:46:30 UTC 2025
+nodename: http5
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/thapar-exam-downloader
+detected binary path: /usr/alwaysdata/uwsgi/2.0.28/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/thapar-exam-downloader/exam-downloader/
+your processes number limit is 385672
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...1545 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP6 address [fd00::6:a159]:8100 fd 3
+Python version: 3.12.11 (main, Aug 11 2025, 04:45:51) [GCC 12.2.0]
+!!! Python Home is not a directory: /home/thapar-exam-downloader/venv/ !!!
+Set PythonHome to /home/thapar-exam-downloader/venv/
+Python path configuration:
+  PYTHONHOME = '/home/thapar-exam-downloader/venv/'
+  PYTHONPATH = (not set)
+  program name = '/home/thapar-exam-downloader/venv//bin/python'
+  isolated = 0
+  environment = 1
+  user site = 1
+  safe_path = 0
+  import site = 1
+  is in build tree = 0
+  stdlib dir = '/home/thapar-exam-downloader/venv/lib/python3.12'
+  sys._base_executable = '/home/thapar-exam-downloader/venv/bin/python'
+  sys.base_prefix = '/home/thapar-exam-downloader/venv/'
+  sys.base_exec_prefix = '/home/thapar-exam-downloader/venv/'
+  sys.platlibdir = 'lib'
+  sys.executable = '/home/thapar-exam-downloader/venv/bin/python'
+  sys.prefix = '/home/thapar-exam-downloader/venv/'
+  sys.exec_prefix = '/home/thapar-exam-downloader/venv/'
+  sys.path = [
+    '/home/thapar-exam-downloader/venv/lib/python312.zip',
+    '/home/thapar-exam-downloader/venv/lib/python3.12',
+    '/home/thapar-exam-downloader/venv/lib/python3.12/lib-dynload',
+  ]
+Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007fb8f1d2f740 (most recent call first):
+  <no Python frame>
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Sep 28 14:57:12 2025] ***
+compiled with version: 12.2.0 on 22 January 2025 13:27:00
+os: Linux-6.12.33-alwaysdata #1 SMP PREEMPT_DYNAMIC Wed Jun 11 12:46:30 UTC 2025
+nodename: http5
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/thapar-exam-downloader
+detected binary path: /usr/alwaysdata/uwsgi/2.0.28/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/thapar-exam-downloader/exam-downloader/
+your processes number limit is 385672
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...1545 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP6 address [fd00::6:a159]:8100 fd 3
+Python version: 3.12.11 (main, Aug 11 2025, 04:45:51) [GCC 12.2.0]
+!!! Python Home is not a directory: /home/thapar-exam-downloader/venv/ !!!
+Set PythonHome to /home/thapar-exam-downloader/venv/
+Python path configuration:
+  PYTHONHOME = '/home/thapar-exam-downloader/venv/'
+  PYTHONPATH = (not set)
+  program name = '/home/thapar-exam-downloader/venv//bin/python'
+  isolated = 0
+  environment = 1
+  user site = 1
+  safe_path = 0
+  import site = 1
+  is in build tree = 0
+  stdlib dir = '/home/thapar-exam-downloader/venv/lib/python3.12'
+  sys._base_executable = '/home/thapar-exam-downloader/venv/bin/python'
+  sys.base_prefix = '/home/thapar-exam-downloader/venv/'
+  sys.base_exec_prefix = '/home/thapar-exam-downloader/venv/'
+  sys.platlibdir = 'lib'
+  sys.executable = '/home/thapar-exam-downloader/venv/bin/python'
+  sys.prefix = '/home/thapar-exam-downloader/venv/'
+  sys.exec_prefix = '/home/thapar-exam-downloader/venv/'
+  sys.path = [
+    '/home/thapar-exam-downloader/venv/lib/python312.zip',
+    '/home/thapar-exam-downloader/venv/lib/python3.12',
+    '/home/thapar-exam-downloader/venv/lib/python3.12/lib-dynload',
+  ]
+Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007fe5fc730740 (most recent call first):
+  <no Python frame>
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Sep 28 14:57:16 2025] ***
+compiled with version: 12.2.0 on 22 January 2025 13:27:00
+os: Linux-6.12.33-alwaysdata #1 SMP PREEMPT_DYNAMIC Wed Jun 11 12:46:30 UTC 2025
+nodename: http5
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/thapar-exam-downloader
+detected binary path: /usr/alwaysdata/uwsgi/2.0.28/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/thapar-exam-downloader/exam-downloader/
+your processes number limit is 385672
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...1545 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP6 address [fd00::6:a159]:8100 fd 3
+Python version: 3.12.11 (main, Aug 11 2025, 04:45:51) [GCC 12.2.0]
+!!! Python Home is not a directory: /home/thapar-exam-downloader/venv/ !!!
+Set PythonHome to /home/thapar-exam-downloader/venv/
+Python path configuration:
+  PYTHONHOME = '/home/thapar-exam-downloader/venv/'
+  PYTHONPATH = (not set)
+  program name = '/home/thapar-exam-downloader/venv//bin/python'
+  isolated = 0
+  environment = 1
+  user site = 1
+  safe_path = 0
+  import site = 1
+  is in build tree = 0
+  stdlib dir = '/home/thapar-exam-downloader/venv/lib/python3.12'
+  sys._base_executable = '/home/thapar-exam-downloader/venv/bin/python'
+  sys.base_prefix = '/home/thapar-exam-downloader/venv/'
+  sys.base_exec_prefix = '/home/thapar-exam-downloader/venv/'
+  sys.platlibdir = 'lib'
+  sys.executable = '/home/thapar-exam-downloader/venv/bin/python'
+  sys.prefix = '/home/thapar-exam-downloader/venv/'
+  sys.exec_prefix = '/home/thapar-exam-downloader/venv/'
+  sys.path = [
+    '/home/thapar-exam-downloader/venv/lib/python312.zip',
+    '/home/thapar-exam-downloader/venv/lib/python3.12',
+    '/home/thapar-exam-downloader/venv/lib/python3.12/lib-dynload',
+  ]
+Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007f8dc69a6740 (most recent call first):
+  <no Python frame>
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Sep 28 14:58:43 2025] ***
+compiled with version: 12.2.0 on 22 January 2025 13:27:00
+os: Linux-6.12.33-alwaysdata #1 SMP PREEMPT_DYNAMIC Wed Jun 11 12:46:30 UTC 2025
+nodename: http5
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/thapar-exam-downloader
+detected binary path: /usr/alwaysdata/uwsgi/2.0.28/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/thapar-exam-downloader/exam-downloader/
+your processes number limit is 385672
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...1545 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP6 address [fd00::6:a159]:8100 fd 3
+Python version: 3.12.11 (main, Aug 11 2025, 04:45:51) [GCC 12.2.0]
+Python main interpreter initialized at 0x7f5ac0e586f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2133432 bytes (2083 KB) for 20 cores
+*** Operational MODE: preforking ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 864079)
+spawned uWSGI worker 1 (pid: 864080, cores: 1)
+spawned 1 offload threads for uWSGI worker 1
+Traceback (most recent call last):
+  File "/home/thapar-exam-downloader/exam-downloader/wsgi.py", line 8, in <module>
+    from main import app as application
+  File "/home/thapar-exam-downloader/exam-downloader/main.py", line 6, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. GAME OVER ***
+OOPS ! failed loading app in worker 1 (pid 864080)
+Sun Sep 28 14:58:44 2025 - need-app requested, destroying the instance...
+SIGINT/SIGTERM received...killing workers...
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Sep 28 14:58:46 2025] ***
+compiled with version: 12.2.0 on 22 January 2025 13:27:00
+os: Linux-6.12.33-alwaysdata #1 SMP PREEMPT_DYNAMIC Wed Jun 11 12:46:30 UTC 2025
+nodename: http5
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/thapar-exam-downloader
+detected binary path: /usr/alwaysdata/uwsgi/2.0.28/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/thapar-exam-downloader/exam-downloader/
+your processes number limit is 385672
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...1545 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP6 address [fd00::6:a159]:8100 fd 3
+Python version: 3.12.11 (main, Aug 11 2025, 04:45:51) [GCC 12.2.0]
+Python main interpreter initialized at 0x7f4eb14586f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2133432 bytes (2083 KB) for 20 cores
+*** Operational MODE: preforking ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 864102)
+spawned uWSGI worker 1 (pid: 864103, cores: 1)
+spawned 1 offload threads for uWSGI worker 1
+Traceback (most recent call last):
+  File "/home/thapar-exam-downloader/exam-downloader/wsgi.py", line 8, in <module>
+    from main import app as application
+  File "/home/thapar-exam-downloader/exam-downloader/main.py", line 6, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. GAME OVER ***
+OOPS ! failed loading app in worker 1 (pid 864103)
+Sun Sep 28 14:58:47 2025 - need-app requested, destroying the instance...
+SIGINT/SIGTERM received...killing workers...
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Sep 28 15:00:06 2025] ***
+compiled with version: 12.2.0 on 22 January 2025 13:27:00
+os: Linux-6.12.33-alwaysdata #1 SMP PREEMPT_DYNAMIC Wed Jun 11 12:46:30 UTC 2025
+nodename: http5
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/thapar-exam-downloader
+detected binary path: /usr/alwaysdata/uwsgi/2.0.28/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/thapar-exam-downloader/exam-downloader/virtualenv/
+your processes number limit is 385672
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...1545 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP6 address [fd00::6:a159]:8100 fd 3
+Python version: 3.12.11 (main, Aug 11 2025, 04:45:51) [GCC 12.2.0]
+Python main interpreter initialized at 0x7fef0a4586f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2133432 bytes (2083 KB) for 20 cores
+*** Operational MODE: preforking ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 866901)
+spawned uWSGI worker 1 (pid: 866902, cores: 1)
+spawned 1 offload threads for uWSGI worker 1
+Traceback (most recent call last):
+  File "/home/thapar-exam-downloader/exam-downloader/wsgi.py", line 8, in <module>
+    from main import app as application
+  File "/home/thapar-exam-downloader/exam-downloader/main.py", line 6, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. GAME OVER ***
+OOPS ! failed loading app in worker 1 (pid 866902)
+Sun Sep 28 15:00:07 2025 - need-app requested, destroying the instance...
+SIGINT/SIGTERM received...killing workers...
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Sep 28 15:02:46 2025] ***
+compiled with version: 12.2.0 on 22 January 2025 13:27:00
+os: Linux-6.12.33-alwaysdata #1 SMP PREEMPT_DYNAMIC Wed Jun 11 12:46:30 UTC 2025
+nodename: http5
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/thapar-exam-downloader
+detected binary path: /usr/alwaysdata/uwsgi/2.0.28/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/thapar-exam-downloader/exam-downloader/virtualenv/
+your processes number limit is 385672
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...1545 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP6 address [fd00::6:a159]:8100 fd 3
+Python version: 3.12.11 (main, Aug 11 2025, 04:45:51) [GCC 12.2.0]
+Python main interpreter initialized at 0x7fb9a2a586f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2133432 bytes (2083 KB) for 20 cores
+*** Operational MODE: preforking ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 871527)
+spawned uWSGI worker 1 (pid: 871528, cores: 1)
+spawned 1 offload threads for uWSGI worker 1
+Traceback (most recent call last):
+  File "/home/thapar-exam-downloader/exam-downloader/wsgi.py", line 8, in <module>
+    from main import app as application
+  File "/home/thapar-exam-downloader/exam-downloader/main.py", line 8, in <module>
+    from flask import Flask, request, jsonify
+ModuleNotFoundError: No module named 'flask'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. GAME OVER ***
+OOPS ! failed loading app in worker 1 (pid 871528)
+Sun Sep 28 15:02:47 2025 - need-app requested, destroying the instance...
+SIGINT/SIGTERM received...killing workers...
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Sep 28 15:02:51 2025] ***
+compiled with version: 12.2.0 on 22 January 2025 13:27:00
+os: Linux-6.12.33-alwaysdata #1 SMP PREEMPT_DYNAMIC Wed Jun 11 12:46:30 UTC 2025
+nodename: http5
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/thapar-exam-downloader
+detected binary path: /usr/alwaysdata/uwsgi/2.0.28/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/thapar-exam-downloader/exam-downloader/virtualenv/
+your processes number limit is 385672
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...1545 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP6 address [fd00::6:a159]:8100 fd 3
+Python version: 3.12.11 (main, Aug 11 2025, 04:45:51) [GCC 12.2.0]
+Python main interpreter initialized at 0x7f764b0586f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2133432 bytes (2083 KB) for 20 cores
+*** Operational MODE: preforking ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 871562)
+spawned uWSGI worker 1 (pid: 871563, cores: 1)
+spawned 1 offload threads for uWSGI worker 1
+Traceback (most recent call last):
+  File "/home/thapar-exam-downloader/exam-downloader/wsgi.py", line 8, in <module>
+    from main import app as application
+  File "/home/thapar-exam-downloader/exam-downloader/main.py", line 8, in <module>
+    from flask import Flask, request, jsonify
+ModuleNotFoundError: No module named 'flask'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. GAME OVER ***
+OOPS ! failed loading app in worker 1 (pid 871563)
+Sun Sep 28 15:02:52 2025 - need-app requested, destroying the instance...
+SIGINT/SIGTERM received...killing workers...
+goodbye to uWSGI.
