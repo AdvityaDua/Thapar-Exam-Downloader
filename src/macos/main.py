@@ -12,7 +12,8 @@ import shutil
 import threading
 import os
 import sys
-from webdriver_manager.chrome import ChromeDriverManager
+import glob
+import subprocess
 
 
 def resource_path(relative_path):
@@ -23,6 +24,126 @@ def resource_path(relative_path):
         base_path = os.path.abspath(".")
 
     return os.path.join(base_path, relative_path)
+
+
+def get_chromedriver_path():
+    """Resolve bundled ChromeDriver path and ensure it is executable."""
+    driver_path = resource_path("driver/chromedriver")
+    if not os.path.exists(driver_path):
+        raise FileNotFoundError(f"ChromeDriver not found at: {driver_path}")
+
+    if not os.access(driver_path, os.X_OK):
+        current_mode = os.stat(driver_path).st_mode
+        os.chmod(driver_path, current_mode | 0o111)
+
+    return driver_path
+
+
+def get_chrome_version():
+    """Return installed Google Chrome version string, if available."""
+    try:
+        result = subprocess.run(
+            ["/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", "--version"],
+            capture_output=True,
+            text=True,
+            check=False
+        )
+        output = (result.stdout or result.stderr or "").strip()
+        if output:
+            return output.split()[-1]
+    except Exception:
+        return None
+    return None
+
+
+def get_driver_version(driver_path):
+    """Return chromedriver version string from binary output, if available."""
+    try:
+        result = subprocess.run([driver_path, "--version"], capture_output=True, text=True, check=False)
+        output = (result.stdout or result.stderr or "").strip()
+        if output:
+            return output.split()[1]
+    except Exception:
+        return None
+    return None
+
+
+def build_driver_candidates():
+    """Collect possible local chromedriver binaries from bundled, cache, and PATH."""
+    candidates = []
+
+    try:
+        candidates.append(get_chromedriver_path())
+    except Exception:
+        pass
+
+    cache_globs = [
+        os.path.expanduser("~/.wdm/drivers/chromedriver/**/chromedriver"),
+        os.path.expanduser("~/.wdm/drivers/chromedriver/**/chromedriver-mac-arm64/chromedriver"),
+    ]
+    for pattern in cache_globs:
+        for path in glob.glob(pattern, recursive=True):
+            if os.path.isfile(path):
+                candidates.append(path)
+
+    which_driver = shutil.which("chromedriver")
+    if which_driver:
+        candidates.append(which_driver)
+
+    unique_candidates = []
+    seen = set()
+    for path in candidates:
+        resolved = os.path.realpath(path)
+        if resolved not in seen:
+            seen.add(resolved)
+            unique_candidates.append(path)
+
+    return unique_candidates
+
+
+def sort_candidates_by_compatibility(candidates):
+    """Prefer drivers matching installed Chrome major version."""
+    chrome_version = get_chrome_version()
+    if not chrome_version:
+        return candidates
+
+    chrome_major = chrome_version.split(".")[0]
+    matched = []
+    unmatched = []
+
+    for path in candidates:
+        driver_version = get_driver_version(path)
+        if driver_version and driver_version.split(".")[0] == chrome_major:
+            matched.append(path)
+        else:
+            unmatched.append(path)
+
+    return matched + unmatched
+
+
+def create_chrome_driver(chrome_options):
+    """Create Chrome WebDriver with local driver first, then Selenium Manager fallback."""
+    setup_errors = []
+
+    candidates = sort_candidates_by_compatibility(build_driver_candidates())
+
+    for candidate in candidates:
+        try:
+            return webdriver.Chrome(service=Service(candidate), options=chrome_options)
+        except Exception as e:
+            setup_errors.append(f"Driver failed ({candidate}): {e}")
+
+    try:
+        return webdriver.Chrome(options=chrome_options)
+    except Exception as e:
+        setup_errors.append(f"Auto driver failed: {e}")
+
+    raise RuntimeError(
+        "Could not start Chrome. "
+        "Your bundled ChromeDriver is likely incompatible with installed Chrome. "
+        "Update src/macos/driver/chromedriver to match your Chrome version. "
+        + " | ".join(setup_errors)
+    )
 
 def check_connection(url='https://www.google.com'):
     """Checks if the internet connection is available using secure SSL verification."""
@@ -145,7 +266,11 @@ class TkinterApp(CTk):
         if check_connection():
             self.label.configure(text="Internet connection is working.")
             self.update_idletasks()
-            self.download_exam(self.subject_entry.get(), self.directory_entry.get())
+            try:
+                self.download_exam(self.subject_entry.get(), self.directory_entry.get())
+            except Exception as e:
+                self.progress_bar.place_forget()
+                self.label.configure(text=f"Error: {e}")
         else:
             self.label.configure(text="Internet connection is not working. Please check your connection.")
     
@@ -162,7 +287,6 @@ class TkinterApp(CTk):
     
     def download_exam(self, subject_code, download_path):
         chromeOptions = webdriver.ChromeOptions()
-        chromeDriverPath = ChromeDriverManager().install()
         prefs = {"download.default_directory": download_path}
         chromeOptions.add_experimental_option("prefs", prefs)
         chromeOptions.add_argument("--headless")
@@ -173,7 +297,12 @@ class TkinterApp(CTk):
         chromeOptions.add_argument("--disable-dev-shm-usage")  
         
         self.label.configure(text='Please wait while we connect to the server.')
-        driver = webdriver.Chrome(service=Service(chromeDriverPath), options=chromeOptions)
+        try:
+            driver = create_chrome_driver(chromeOptions)
+        except Exception as e:
+            self.label.configure(text=f"Chrome setup failed: {e}")
+            return
+
         driver.get("https://cl.thapar.edu/ques.php")
         
 
